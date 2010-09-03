@@ -1,0 +1,44 @@
+########################################################################
+# Simple CGI form to generate MD5 hashes suitable for use in /etc/shadow and an
+# Apache AuthUserFile. Input is checked for strength with Data::Password and
+# the hash is generated using Crypt::PasswdMD5.
+#   apt-get install libdata-password-perl libcrypt-passwdmd5-perl \
+#                   aspell wamerican
+#   (or other language dictionaries)
+#
+# This allows users to maintain password secrecy and allows sysadmins to
+# enforce strong passwords.  A sysadmin should never need to create, send, or
+# receive a user's plain-text password; just ask the user for a hash.
+#
+########################################################################
+# Changelog:
+#
+# Tue Aug 31 11:20:06 CDT 2010
+# - v0.1
+# - Initial release.
+#
+########################################################################
+# License: MIT
+#
+# Copyright (c) 2010 Michael Shuler <michael@pbandjelly.org>
+#
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation
+# files (the "Software"), to deal in the Software without
+# restriction, including without limitation the rights to use,
+# copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following
+# conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
